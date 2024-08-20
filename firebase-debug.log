@@ -1,0 +1,145 @@
+[debug] [2024-08-20T06:32:14.975Z] ----------------------------------------------------------------------
+[debug] [2024-08-20T06:32:14.979Z] Command:       /opt/homebrew/Cellar/node/22.3.0/bin/node /opt/homebrew/bin/firebase init
+[debug] [2024-08-20T06:32:14.979Z] CLI Version:   13.15.2
+[debug] [2024-08-20T06:32:14.979Z] Platform:      darwin
+[debug] [2024-08-20T06:32:14.979Z] Node Version:  v22.3.0
+[debug] [2024-08-20T06:32:14.979Z] Time:          Tue Aug 20 2024 12:02:14 GMT+0530 (India Standard Time)
+[debug] [2024-08-20T06:32:14.979Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-08-20T06:32:14.983Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-08-20T06:32:14.984Z] > authorizing via signed-in user (purwarkevin@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/i183x/Documents/gptCode/eternal-quill
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-08-20T06:33:43.363Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2024-08-20T06:33:44.149Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2024-08-20T06:33:44.149Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project eternal-quill-01 (eternal-quill-01) 
+[info] 
+=== Firestore Setup
+[debug] [2024-08-20T06:33:46.352Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/eternal-quill-01/services/firestore.googleapis.com [none]
+[debug] [2024-08-20T06:33:46.352Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/eternal-quill-01/services/firestore.googleapis.com x-goog-quota-user=projects/eternal-quill-01
+[debug] [2024-08-20T06:33:47.987Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/eternal-quill-01/services/firestore.googleapis.com 200
+[debug] [2024-08-20T06:33:47.987Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/eternal-quill-01/services/firestore.googleapis.com [omitted]
+[debug] [2024-08-20T06:33:47.988Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/eternal-quill-01/databases/(default) [none]
+[debug] [2024-08-20T06:33:49.447Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/eternal-quill-01/databases/(default) 200
+[debug] [2024-08-20T06:33:49.448Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/eternal-quill-01/databases/(default) {"name":"projects/eternal-quill-01/databases/(default)","uid":"c554277e-0c49-403f-b86f-70885dd554d0","createTime":"2024-08-20T05:50:50.937227Z","updateTime":"2024-08-20T05:50:50.937227Z","locationId":"nam5","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2024-08-20T05:50:50.937227Z","appEngineIntegrationMode":"DISABLED","keyPrefix":"s","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","etag":"IIPe7935gogDMMjf1JHwgogD"}
+[debug] [2024-08-20T06:33:49.448Z] database_type: FIRESTORE_NATIVE
+[debug] [2024-08-20T06:33:49.448Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-08-20T06:33:49.449Z] > authorizing via signed-in user (purwarkevin@gmail.com)
+[debug] [2024-08-20T06:33:49.449Z] [iam] checking project eternal-quill-01 for permissions ["firebase.projects.get"]
+[debug] [2024-08-20T06:33:49.450Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/eternal-quill-01:testIamPermissions [none]
+[debug] [2024-08-20T06:33:49.450Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/eternal-quill-01:testIamPermissions x-goog-quota-user=projects/eternal-quill-01
+[debug] [2024-08-20T06:33:49.450Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/eternal-quill-01:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-08-20T06:33:50.595Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/eternal-quill-01:testIamPermissions 200
+[debug] [2024-08-20T06:33:50.595Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/eternal-quill-01:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2024-08-20T06:34:08.930Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/eternal-quill-01/releases pageSize=10&pageToken=
+[debug] [2024-08-20T06:34:10.494Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/eternal-quill-01/releases 200
+[debug] [2024-08-20T06:34:10.494Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/eternal-quill-01/releases {"releases":[{"name":"projects/eternal-quill-01/releases/cloud.firestore","rulesetName":"projects/eternal-quill-01/rulesets/03682588-63a8-4001-9c17-b737347190d7","createTime":"2024-08-20T05:51:01.000190Z","updateTime":"2024-08-20T05:56:06.171388Z"}]}
+[debug] [2024-08-20T06:34:10.495Z] Found ruleset: projects/eternal-quill-01/rulesets/03682588-63a8-4001-9c17-b737347190d7
+[debug] [2024-08-20T06:34:10.495Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/eternal-quill-01/rulesets/03682588-63a8-4001-9c17-b737347190d7 [none]
+[debug] [2024-08-20T06:34:11.926Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/eternal-quill-01/rulesets/03682588-63a8-4001-9c17-b737347190d7 200
+[debug] [2024-08-20T06:34:11.927Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/eternal-quill-01/rulesets/03682588-63a8-4001-9c17-b737347190d7 [omitted]
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2024-08-20T06:34:12.343Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/eternal-quill-01/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2024-08-20T06:34:12.347Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/eternal-quill-01/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* [none]
+[debug] [2024-08-20T06:34:13.837Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/eternal-quill-01/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2024-08-20T06:34:13.837Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/eternal-quill-01/databases/(default)/collectionGroups/-/indexes {}
+[debug] [2024-08-20T06:34:13.872Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/eternal-quill-01/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* 200
+[debug] [2024-08-20T06:34:13.872Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/eternal-quill-01/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* {"fields":[{"name":"projects/eternal-quill-01/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[info] 
+=== Functions Setup
+[debug] [2024-08-20T06:34:13.875Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-08-20T06:34:13.876Z] > authorizing via signed-in user (purwarkevin@gmail.com)
+[debug] [2024-08-20T06:34:13.876Z] [iam] checking project eternal-quill-01 for permissions ["firebase.projects.get"]
+[debug] [2024-08-20T06:34:13.877Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/eternal-quill-01:testIamPermissions [none]
+[debug] [2024-08-20T06:34:13.877Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/eternal-quill-01:testIamPermissions x-goog-quota-user=projects/eternal-quill-01
+[debug] [2024-08-20T06:34:13.877Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/eternal-quill-01:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-08-20T06:34:14.985Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/eternal-quill-01:testIamPermissions 200
+[debug] [2024-08-20T06:34:14.986Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/eternal-quill-01:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-08-20T06:34:14.987Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/eternal-quill-01/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-08-20T06:34:14.987Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/eternal-quill-01/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/eternal-quill-01
+[debug] [2024-08-20T06:34:14.992Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/eternal-quill-01/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-08-20T06:34:14.992Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/eternal-quill-01/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/eternal-quill-01
+[debug] [2024-08-20T06:34:16.535Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/eternal-quill-01/services/runtimeconfig.googleapis.com 200
+[debug] [2024-08-20T06:34:16.536Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/eternal-quill-01/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-08-20T06:34:16.582Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/eternal-quill-01/services/cloudfunctions.googleapis.com 200
+[debug] [2024-08-20T06:34:16.583Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/eternal-quill-01/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2024-08-20T06:34:16.584Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/eternal-quill-01/services/cloudfunctions.googleapis.com:enable [none]
+[debug] [2024-08-20T06:34:16.584Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/eternal-quill-01/services/cloudfunctions.googleapis.com:enable x-goog-quota-user=projects/eternal-quill-01
+[debug] [2024-08-20T06:34:17.339Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/eternal-quill-01/services/cloudfunctions.googleapis.com:enable 200
+[debug] [2024-08-20T06:34:17.339Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/eternal-quill-01/services/cloudfunctions.googleapis.com:enable [omitted]
+[debug] [2024-08-20T06:34:27.341Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/eternal-quill-01/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-08-20T06:34:27.342Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/eternal-quill-01/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/eternal-quill-01
+[debug] [2024-08-20T06:34:28.991Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/eternal-quill-01/services/cloudfunctions.googleapis.com 200
+[debug] [2024-08-20T06:34:28.992Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/eternal-quill-01/services/cloudfunctions.googleapis.com [omitted]
+[info] Let's create a new codebase for your functions.
+[info] A directory corresponding to the codebase will be created in your project
+[info] with sample code pre-configured.
+
+[info] See https://firebase.google.com/docs/functions/organize-functions for
+[info] more information on organizing your functions using codebases.
+
+[info] Functions can be deployed with firebase deploy.
+
+[info] ✔  Wrote functions/package.json 
+[info] ✔  Wrote functions/.eslintrc.js 
+[info] ✔  Wrote functions/index.js 
+[info] ✔  Wrote functions/.gitignore 
+[info] 
+=== Hosting Setup
+[debug] [2024-08-20T06:35:14.753Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/eternal-quill-01 [none]
+[debug] [2024-08-20T06:35:15.274Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/eternal-quill-01 200
+[debug] [2024-08-20T06:35:15.274Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/eternal-quill-01 {"projectId":"eternal-quill-01","projectNumber":"709677299644","displayName":"eternal-quill-01","name":"projects/eternal-quill-01","resources":{"hostingSite":"eternal-quill-01"},"state":"ACTIVE","etag":"1_15976939-7a6f-4850-a89e-7766b9c33ccf"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2024-08-20T06:36:35.206Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2024-08-20T06:36:35.356Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2024-08-20T06:36:35.357Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"10.13.0","browserURL":"https://www.gstatic.com/firebasejs/10.13.0/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/10.13.0/firebase.tgz"},"live":{"version":"10.13","browserURL":"https://www.gstatic.com/firebasejs/live/10.13/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/10.13/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/10.13.0/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/10.13.0/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/10.13.0/firebase-auth/cordova.js","auth/web-extension":"https://www.gstatic.com/firebasejs/10.13.0/firebase-auth/web-extension.js","functions":"https://www.gstatic.com/firebasejs/10.13.0/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/10.13.0/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/10.13.0/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/10.13.0/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/10.13.0/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/10.13.0/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/10.13.0/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/10.13.0/firebase-database.js","vertexai-preview":"https://www.gstatic.com/firebasejs/10.13.0/firebase-vertexai-preview.js","firestore.memory":"https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.memory.js"}}
+[info] i  Skipping write of public/index.html 
+[info] 
+[info] i  Detected a .git folder at /Users/i183x/Documents/gptCode/eternal-quill 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=602238269&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2024-08-20T06:38:09.954Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2024-08-20T06:38:09.957Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2024-08-20T06:38:10.519Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2024-08-20T06:38:10.519Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2024-08-20T06:38:10.535Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2024-08-20T06:38:10.985Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2024-08-20T06:38:10.985Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"i183x","id":89032541,"node_id":"MDQ6VXNlcjg5MDMyNTQx","avatar_url":"https://avatars.githubusercontent.com/u/89032541?v=4","gravatar_id":"","url":"https://api.github.com/users/i183x","html_url":"https://github.com/i183x","followers_url":"https://api.github.com/users/i183x/followers","following_url":"https://api.github.com/users/i183x/following{/other_user}","gists_url":"https://api.github.com/users/i183x/gists{/gist_id}","starred_url":"https://api.github.com/users/i183x/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/i183x/subscriptions","organizations_url":"https://api.github.com/users/i183x/orgs","repos_url":"https://api.github.com/users/i183x/repos","events_url":"https://api.github.com/users/i183x/events{/privacy}","received_events_url":"https://api.github.com/users/i183x/received_events","type":"User","site_admin":false,"name":"Krishna Purwar","company":"Vellore Institute of Technology - Chennai","blog":"https://s3-resume-cv.s3.ap-south-1.amazonaws.com/KrishnaPurwarResume_DataScience.pdf","location":"Kanpur, Uttar Pradesh","email":null,"hireable":null,"bio":null,"twitter_username":null,"notification_email":null,"public_repos":22,"public_gists":0,"followers":2,"following":5,"created_at":"2021-08-16T16:02:16Z","updated_at":"2024-05-02T02:29:34Z","private_gists":0,"total_private_repos":1,"owned_private_repos":1,"disk_usage":25070,"collaborators":1,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] ✔  Success! Logged into GitHub as i183x 
+[info] 
